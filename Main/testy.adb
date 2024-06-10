@@ -17,7 +17,6 @@ PROCEDURE Testy IS
    St:T_Sat;
 BEGIN
    WHILE 1=1
-      begin
    Put_Line("choisir une option:");
    Put_Line("1-inscrire");
    Put_Line("2-visualisez tous");
