@@ -16,7 +16,8 @@ PROCEDURE Testy IS
    age:integer;
    St:T_Sat;
 BEGIN
-   loop
+   LOOP
+      begin
    Put_Line("choisir une option:");
    Put_Line("1-inscrire");
    Put_Line("2-visualisez tous");
@@ -157,6 +158,7 @@ BEGIN
             FOR I IN Tf'Range LOOP
                IF Tf(I).Nom=Nom THEN
                   Tf(I).nbrfrr:=Tf(I).nbrfrr+1;
+
                   END IF;
             END LOOP;
             overwrite_fiche(tf(1),n);
@@ -202,7 +204,11 @@ BEGIN
 
    WHEN OTHERS => Put_Line("erreur");new_line;
 
-   END CASE;
+         END CASE;
+      EXCEPTION
+         WHEN Data_Error =>Skip_Line;Put_Line("non");
+         when others =>Skip_Line;Put_Line("non");
+   end;
    END LOOP;
    end testy;
 
