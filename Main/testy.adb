@@ -16,7 +16,7 @@ PROCEDURE Testy IS
    age:integer;
    St:T_Sat;
 BEGIN
-   LOOP
+   WHILE 1=1
       begin
    Put_Line("choisir une option:");
    Put_Line("1-inscrire");
